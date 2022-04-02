@@ -6,6 +6,8 @@ public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D _rigidbody;
     public float speed = 2.35f;
+    [SerializeField]
+    private Animator _animator;
 
     // Start is called before the first frame update
     void Start()
@@ -35,5 +37,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         _rigidbody.velocity = direction;
+
+        _animator.SetFloat("velocity", direction.magnitude);
     }
 }
