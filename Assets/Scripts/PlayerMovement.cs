@@ -40,4 +40,9 @@ public class PlayerMovement : MonoBehaviour
 
         _animator.SetFloat("velocity", direction.magnitude);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("OUCH!!!");
+    }
 }
