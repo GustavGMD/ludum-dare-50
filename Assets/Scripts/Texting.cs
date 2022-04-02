@@ -10,9 +10,11 @@ public class Texting : MonoBehaviour
 {
     public TextMeshProUGUI gt;
 
+    public Spell spellList;
+
     //public HorizontalLayoutGroup grid;
 
-    private static readonly HashSet<char> Letters = new HashSet<char>("qwertyuiopasdfghjklçzxcvbnm");
+    private static readonly HashSet<char> Letters = new HashSet<char>("qwertyuiopasdfghjklçzxcvbnm ");
 
     private ArrayList learned;
 
@@ -21,7 +23,11 @@ public class Texting : MonoBehaviour
     {
         gt = GetComponent<TextMeshProUGUI>();
         learned = new ArrayList();
-        learned.Add(Spell.wat);
+        for (int i = 0; i < 2; i++)
+        {
+            learned.Add(spellList.Valids[i]);
+            Debug.Log("Spell lerned "+spellList.Valids[i]);
+        }
     }
 
     // Update is called once per frame
@@ -38,16 +44,13 @@ public class Texting : MonoBehaviour
             }
             else if ((c == '\n') || (c == '\r')) // enter/return
             {
-               // CAST SPELL
-               Spell myStatus;
-               Debug.Log("Try convert");
-               if (Enum.TryParse(gt.text.ToLower(), out myStatus)) 
+                var i = learned.IndexOf(gt.text.ToLower());
+                if (i>=0) {
+                    Debug.Log("Spell cast "+spellList.spellDefinitions[i].spellName);
+                }
+                else
                 {
-                    if (learned.Contains(myStatus))
-                    {
-                        Debug.Log("SPELLLL" + myStatus);
-                    }
-                    
+                    Debug.Log("Spell not lernead");
                 }
                 gt.text = "";
             }
@@ -70,8 +73,9 @@ public class Texting : MonoBehaviour
    
 }
 
-public enum Spell {
+public enum SpellOld {
 
     wat,
-    winto
+    winto,
+    blackHole
 }

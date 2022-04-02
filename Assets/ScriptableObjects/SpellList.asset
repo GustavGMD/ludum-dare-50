@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51b184f18d2bcdb4ba9f3471f8189bcd, type: 3}
+  m_Name: SpellList
+  m_EditorClassIdentifier: 
+  valids:
+  - wat
+  - windo
+  - black hole
+  - pillars
+  spellDefinitions:
+  - {fileID: 11400000, guid: 8e70aa395d454664399b0deb718b0d72, type: 2}
+  - {fileID: 11400000, guid: c663e7fdade3b6745ac542bc43e39da9, type: 2}
+  - {fileID: 11400000, guid: f0117b6e0bc6dd243b73196c40d81675, type: 2}
+  - {fileID: 11400000, guid: fb774ab9cc5decb4dbeff1bd74d82c47, type: 2}
+  - {fileID: 11400000, guid: 31c0c865121115245947add07b929eec, type: 2}
