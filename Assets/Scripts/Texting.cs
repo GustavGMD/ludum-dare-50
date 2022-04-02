@@ -23,11 +23,6 @@ public class Texting : MonoBehaviour
     {
         gt = GetComponent<TextMeshProUGUI>();
         learned = new ArrayList();
-        for (int i = 0; i < 2; i++)
-        {
-            learned.Add(spellList.Valids[i]);
-            Debug.Log("Spell lerned "+spellList.Valids[i]);
-        }
     }
 
     // Update is called once per frame
@@ -50,7 +45,7 @@ public class Texting : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("Spell not lernead");
+                    Debug.Log("Spell not learnead");
                 }
                 gt.text = "";
             }
@@ -60,22 +55,12 @@ public class Texting : MonoBehaviour
             }
         }
     }
-
-    void animateCharacter() {
-        var i = gt.text.Length - 1;
-        Debug.Log("length " + gt.text.Length + " i: "+ i + "Array " + gt.textInfo.characterInfo);
-        TMP_CharacterInfo myCharInfo = gt.textInfo.characterInfo[i];
-        Debug.Log("charInfo "+myCharInfo);
-        myCharInfo.scale = 200f;
-        gt.textInfo.characterInfo[i] = myCharInfo;
-        gt.UpdateVertexData();
-    }
    
-}
-
-public enum SpellOld {
-
-    wat,
-    winto,
-    blackHole
+   public void learnNewSpell() {
+        int index = learned.Count + 1;
+        if (index < spellList.Valids.Count) 
+        {
+            learned.Add(spellList.Valids[index]);
+        }
+   }
 }

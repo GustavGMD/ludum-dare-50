@@ -15,8 +15,9 @@ MonoBehaviour:
   valids:
   - wat
   - windo
-  - black hole
   - pillars
+  - star
+  - black hole
   spellDefinitions:
   - {fileID: 11400000, guid: 8e70aa395d454664399b0deb718b0d72, type: 2}
   - {fileID: 11400000, guid: c663e7fdade3b6745ac542bc43e39da9, type: 2}

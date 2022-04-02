@@ -423,6 +423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gt: {fileID: 0}
+  spellList: {fileID: 11400000, guid: 0990fcd1f8685424aa2972de886d5f8d, type: 2}
 --- !u!114 &1616451947
 MonoBehaviour:
   m_ObjectHideFlags: 0
